@@ -1,103 +1,12 @@
-.btn {
-    border: none;
-    font-size: 11px;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-
-
-
-
-.aside-menu-list {
-    list-style: none;
-    margin: 0;
-    padding: 1px 0;
-    background-color: #2f2f2f;
-    /* 보더 대신 이렇게 라인 그을수 있습니다 bgc 지정하고 1px씩 띄워서 보여주기 */
-            
-    .aside-menu-item {
-        display: flex;
-        align-items: center;
-        background-color: gray;
-        margin: 1px 0;
-        padding: 15px;
-        
-        &:hover {
-            background-color: #524b4b;
-        }
-        
-        &:active {
-            background-color: #333030;
-        }
-
-        & > div:nth-of-type(1) {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 25px;
-        }
-
-        & > div:nth-of-type(2) {
-            padding-left: 5px;
-        }
-    }
-
-    & > a {
-        text-decoration: none;
-        color: #fff;
-
-    }
-
-}
-
-
-
-.btn-group {
-    
-    display: flex;
-
-    & > button:nth-of-type(1) {
-        color: black;
-        background-color: #ffc107;
-        border-bottom-right-radius: 0px;
-        border-top-right-radius: 0px;
-                        
-        &:hover {
-            background-color: #dda600;
-        }
-
-        &:active {
-            background-color: #b98e0b;
-        }
-    }
-
-
-    & > button:nth-last-of-type(1) {
-        color: #fff;       
-        background-color: #dc3545;
-        border-bottom-left-radius: 0px;
-        border-top-left-radius: 0px;
-        
-        &:hover {
-            background-color: #d82a3b;
-        }
-
-        &:active {
-            background-color: #aa1928;
-        }
-    }
-}
-
 html {
     height: 100vh;
+    background-color: #fafafa;
 }
 
 body {
     display: flex;
     flex-direction: column;
-    margin: 0;
+    margin: 0 10px;
     height: 100%;
 }
 
@@ -150,5 +59,16 @@ body {
     }
     &:active {
         background-color: #ac3545;
+    }
+}
+
+.btn-black {
+    background-color: #444444;
+    color: #ffffff;
+    &:hover {
+        background-color: #333333;
+    }
+    &:active {
+        background-color: #111111;
     }
 }
