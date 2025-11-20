@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* X:nth-of-type(2) : body tag안의 자식요소 X중 2번째 */
+        div:nth-of-type(2) > button:nth-of-type(2) {
+            /* background-color: red; */
+        }
+
+
+        body > div button:not(body > div > div:nth-of-type(1) > button:nth-of-type(2)):nth-of-type(2) {
+            background-color: blue;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div>
+        <button>1</button>
+        <input type="button" value="2">
+    </div>
+
+    <div>
+        <button>3</button>
+        <button>4</button>
+    </div>
+    <div>
+        <div>
+            <button>5</button>
+            <button>6</button>
+            <div>
+                <button>8</button>
+                <button>9</button>
+            </div>
+        </div>
+    </div>
+    <div>
+        <button>7</button>
+    </div>
+
+</body>
+</html>

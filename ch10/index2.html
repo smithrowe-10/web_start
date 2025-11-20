@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        input[type=checkbox] {
+            display: none;
+        }
+
+        input[type=checkbox] + label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            border: 1px solid #dbdbdb;
+            border-radius: 10px;
+            width: 45px;
+            height: 45px;
+            cursor: pointer;
+            padding: 5px;
+            margin: 3px;
+        }
+
+        input[type=checkbox]:checked + label::after{
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 6px;
+            background-color: #defd6c;
+        }
+        /* 숨겨진 체크박스가 체크되면 인접 label에 위 css 적용 */
+
+        
+        .check-wrap {
+            display: flex;        /* 가로 정렬 */
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="check-wrap">
+        <input type="checkbox" id="chk1">  
+        <label for="chk1"></label>
+        
+        <input type="checkbox" id="chk2">  
+        <label for="chk2"></label>
+    </div>
+    <!-- checkbox는 css적용이 안됨 -->
+
+</body>
+</html>

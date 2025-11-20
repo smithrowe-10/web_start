@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    html {
+      background-color: #161617;
+    }
+
+    .root {
+      height: 800px;
+    }
+
+    .container {
+      width: 1260px;
+      margin: 0 auto;
+      padding: 152px 0px 62px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 40px;
+
+      & h1 {
+        margin: 0;
+        font-size: 42px;
+        color: #86868b;
+      }
+
+      & a {
+        color: #2997ff;
+        font-size: 21px;
+        text-decoration: none;
+      }
+    }
+
+    .card-flex-box {
+      display: flex;
+      gap: 25px;
+      list-style-type: none;
+      margin: 25px 0;
+      padding: 0;
+      overflow: hidden;
+      overflow-x: scroll;
+    }
+
+    .card {
+      flex-shrink: 0;
+      border-radius: 28px;
+      width: 372px;
+      height: 348px;
+      background: black;
+      cursor: pointer;
+      transition: all 0.25s ease-in-out;
+    }
+
+    .card:hover {
+      transform: scale(105%);
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="root">
+    <div class="container">
+      <div class="header">
+        <div>
+          <h1>iPad, Apple에서 사면</h1>
+          <h1>가장 좋은 이유.</h1>
+        </div>
+        <div>
+          <a href="">iPad 쇼핑하기 →</a>
+        </div>
+      </div>
+
+      <ul class="card-flex-box">
+        <li class="card"></li>
+        <li class="card"></li>
+        <li class="card"></li>
+        <li class="card"></li>
+        <li class="card"></li>
+      </ul>
+
+    </div>
+  </div>
+
+</body>
+</html>

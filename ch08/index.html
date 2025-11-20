@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .p-box {
+      display: flex;
+      flex-flow: row wrap;
+      align-content: center;
+      justify-content: center;
+      box-sizing: border-box;
+      border: 1px solid #dbdbdb;
+      padding: 10px;
+      width: 550px;
+      height: 350px;
+      background: #EEAECA;
+      background: radial-gradient(circle,rgba(238, 174, 202, 0.5) 0%, rgba(148, 187, 233, 0.5) 100%);
+    }
+
+    .c-box {
+      flex-shrink: 1;
+      box-sizing: border-box;
+      border: 1px solid #dbdbdb;
+      width: 100px;
+      height: 100px;
+      background: #4cb6c2;
+      background: radial-gradient(circle,rgba(76, 182, 194, 0.5) 0%, rgba(252, 70, 107, 0.5) 100%);
+    }
+
+    .p-box2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      border: 1px solid #dbdbdb;
+      width: 300px;
+      height: 300px;
+    }
+
+    .c-box2 {
+      width: 100px;
+      height: 100px;
+      background-color: #4cb6c2;
+    }
+  </style>
+
+</head>
+<body>
+
+  <div class="p-box2">
+    <div class="c-box2"></div>
+  </div>
+  
+  <div class="p-box">
+    <div class="c-box"></div>
+    <div class="c-box"></div>
+    <div class="c-box"></div>
+    <div class="c-box"></div>
+    <div class="c-box"></div>
+    <div class="c-box"></div>
+    <div class="c-box"></div>
+    <div class="c-box"></div>
+    <div class="c-box"></div>
+    <div class="c-box"></div>
+    <div class="c-box"></div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 400px;
+            height: 300px;
+            background-color: #eee;
+        }
+        
+        .or-text {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        .or-text::before,
+        .or-text::after {
+            display: block;
+            content: "";
+            flex-grow: 1;
+            height: 1px;
+            background-color: #dbdbdb;
+        }
+
+        .or-text::before {
+            margin-right: 5px;
+        }
+
+        .or-text::after {
+            margin-left: 5px;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+    <div class="box">
+        <div class="or-text">또는</div>
+    </div>
+    <div class="box">
+        <div class="or-text">사용자 이름 또는</div>
+    </div>
+    <div class="box">
+        <div class="or-text">비밀번호 또는</div>
+    </div>
+    <div class="box">
+        <div class="or-text">이메일 또는</div>
+    </div>
+</body>
+</html>

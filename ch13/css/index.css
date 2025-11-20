@@ -1,0 +1,86 @@
+
+html {
+    height: 100%;
+}
+
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+}
+
+
+
+header {
+    height: 50px;
+    background: #020024;
+    background: linear-gradient(90deg,rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 0%, rgba(0, 212, 255, 1) 100%);
+
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+
+    .main-title {
+        margin: 0;
+        font-size: 15px;
+        color: aliceblue;
+        cursor: default;
+    }
+}
+
+
+
+aside {
+    min-width: 200px;
+    height: 100%;
+    width: 200px;
+    background-color: #737373;
+
+        .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 0;
+        gap: 5px;
+        background-color: #0f0f0f;
+
+        .aside-student-name {
+            margin: 0;
+            font-size: 16px;
+            color: white;
+            cursor: default;
+        }
+    }
+}
+
+
+
+main {
+    display: flex;
+    flex-grow: 1;
+}
+
+    
+article {
+    height: 100%;
+    flex-grow: 1;
+    box-sizing: border-box;
+    background: #EEAECA;
+    background: radial-gradient(circle,rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    padding: 8px;
+    min-width: 1000px;
+
+    .main-top{
+        height: 180px;
+        background-color: #009999;
+        margin-bottom: 10px;
+    }
+    .main-body{
+        height: 75%;
+        background-color: #009999;
+    }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>고객 문의 접수</title>
+    <h1>고객 문의 접수</h1>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>이름</td>
+        <td><input type="text" name="" id="name"></td>
+      </tr>
+      <tr>
+        <td>이메일</td>
+        <td><input type="text" name="" id="email"></td>
+      </tr>
+
+      <tr>
+        <td>전화번호</td>
+        <td><input type="text" name="" id="number"></td>
+      </tr>
+
+      <tr>
+        <td>문의유형</td>
+        <td>
+          <select name="" id="FQA">
+            <option value="">선택하세요</option>
+          </select>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          우선순위
+        </td>
+        <td>
+          <input type="radio" name="top" id="top1">
+          <label for="top1">낮음</label>
+          <input type="radio" name="top" id="top2">
+          <label for="top2">보통</label>
+          <input type="radio" name="top" id="top3">
+          <label for="top3">높음</label>
+          <input type="radio" name="top" id="top4">
+          <label for="top4">긴급</label>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <label for="context">문의내용</label>
+        </td>
+        <td>
+          <textarea name="" id="context"></textarea>
+        </td>
+      </tr>
+
+        <tr>
+          <td>알림 수신 동의</td>
+          <td>
+            <table>
+              <tr>
+                <td>
+                  <input type="checkbox" id="emailOK">
+                  <label for="emailOK">이메일 수신 동의</label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="checkbox" id="smsOK">
+                  <label for="smsOK">SMS 수신 동의</label>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <button>문의 접수</button>
+            <button>초기화</button>
+          </td>
+        </tr>
+    </table>
+  </body>
+</html>

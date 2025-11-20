@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn {
+            box-sizing: border-box;
+            border: 1px solid #dbdbdb;
+            border-radius: 4px;
+            padding: 5px 10px;
+            background-color: #fff;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #fafafa;
+        }
+
+        .btn:active {
+            background-color: #eee;
+        }
+
+        .btn:focus {
+            outline: none;
+            border: 1px solid skyblue;
+        }
+
+        .text-input {
+            box-sizing: border-box;
+            outline: none;
+            border: 1px solid #dbdbdb;
+            border-radius: 4px;
+            padding: 3px 5px;
+            cursor: pointer;
+        }
+
+        .text-input:active {
+            background-color: #fafafa;
+        }
+
+        .text-input:disabled {
+            background-color: #eee;
+            color: #999999;
+            cursor: not-allowed;
+        }
+
+        .text-input:disabled ~ .btn {
+            background-color: #eee;
+            color: #999999;
+            cursor: not-allowed;
+        }
+
+    </style>
+</head>
+<body>
+
+    <input type="text" class="text-input" value="테스트 텍스트" disabled>
+    <button class="btn">버튼</button>
+    <button class="btn">버튼</button>
+    <button class="btn">버튼</button>
+    <button class="btn">버튼</button>
+
+</body>
+</html>

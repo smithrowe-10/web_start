@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            perspective: 500px;
+            /* 얼마나 멀리서 볼꺼니 */
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: translate(100px, 100px) rotateX(-180deg) rotateY(25deg);
+            transition: all 0.5s ease;
+
+            &:hover {
+                transform: translate(100px, 100px) rotateX(-180deg) rotateY(25deg) scale3d(120%, 120%, 120%);
+            }
+
+            & > div {
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                border: 1px solid #030303;
+            }
+
+            /* 앞 */
+            & > div:nth-of-type(1) {    
+                transform: translateZ(50px);
+            }
+
+            /* 뒤 */
+            & > div:nth-of-type(2) {
+                transform: translateZ(-50px) rotateY(180deg);
+            }
+
+            /* 우 */
+            & > div:nth-of-type(3) {
+                transform: translateX(50px) rotateY(90deg);
+            }
+
+            /* 좌 */
+            & > div:nth-of-type(4) {
+                transform: translateX(-50px) rotateY(-90deg);
+            }
+
+            /* 상 */
+            & > div:nth-of-type(5) {                
+                transform: translateY(-50px) rotateX(-90deg);
+            }
+
+            /* 하 */
+            & > div:nth-of-type(6) {
+                transform: translateY(50px) rotateX(90deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="box1"></div>
+            <div class="box2"></div>
+            <div class="box3"></div>
+            <div class="box4"></div>
+            <div class="box5"></div>
+            <div class="box6"></div>
+        </div>
+
+    </div>
+</body>
+</html>
