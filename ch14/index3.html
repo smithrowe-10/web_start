@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <script>
+        // 함수
+        // JS에는 void가 없다 return이 없는 함수는 없음 😱
+
+        // undifined - 이새낀 변수에 값이 할당이 안됨 - 이거뜨면 내가 대입을 안함 병신짓한거
+        // null - 할당은 됐는데 값이 유효하지않음 - 이거뜨면 객체를 확인
+        
+        function fx1() {
+            console.log("함수1 호출")
+        }
+
+        function fx1() {
+            console.log("함수1 호출!!!")
+        }
+
+        fx1();
+
+        let fx2 = fx1;
+        let fx3 = fx2;
+
+        console.log(typeof fx2);
+
+        function fx4() {
+            return function fx5() {
+                console.log('함수5 호출!!!')
+            }
+        }
+
+        let fx6 = fx4();
+        let fx7 = fx4();
+
+        let fx8 = fx4;
+        let fx9 = fx4;
+
+        console.log(fx6 === fx7);
+        console.log(fx8 === fx9);
+
+    </script>
+    
+</body>
+</html>

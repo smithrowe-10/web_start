@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <script>
+        // 콜백 함수
+        // NaN : 연산할수 없는 값을 연산하면 이거나옴
+
+        function fx(callback, a, b) {
+            if (a === undefined || b === undefined) {
+                callback();
+                return;
+            }
+
+            const result = callback(a, b);
+            console.log("결과: " + result)
+        }
+
+        fx(function print() {console.log("출력")});
+        fx(function add(a, b) {return a + b;});
+        fx(function add(a, b) {return a + b;}, 10);
+        fx(function add(a, b) {return a + b;}, 10 , 20);
+
+
+    </script>
+    
+</body>
+</html>

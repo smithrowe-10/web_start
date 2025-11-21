@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <script>
+        // spread 문법 (전개 연산자)
+        // (1,2), (3,4)
+
+        class A {
+            data1;
+            data2;
+
+            constructor(data1, data2) {
+                this.data1 = data1;
+                this.data2 = data2;
+            }
+        }
+
+        let a1 = new A(1, 2);
+        let a2 = new A(3, 4);
+
+        let b = {
+            data1: null,
+            data2: null,
+        };
+        let b1 = {
+            ...b, 
+            data1: 1,
+            data2: 2,
+        }
+
+        let b2 = {
+            ...b
+        }
+
+        let b3 = b;
+
+        console.log(a1);
+        console.log(a2);
+        console.log(b1);
+        console.log(b2);
+
+        const student = {
+            name: null,
+            age: 0,
+            address: "",
+        }
+
+        const name = prompt("이름");
+        const age = prompt("나이");
+        const address = prompt("주소"); 
+        const gender = prompt("성별")
+
+        const student1 = {
+            ...student,
+            "name": name,
+            "age": age,
+            address,
+            // 키값과 변수명이 같으면 생략 ㄱㄴ
+            gender: gender,
+        }
+
+        console.log(student1);
+        
+
+    </script>
+    
+</body>
+</html>

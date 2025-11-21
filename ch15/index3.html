@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <script>
+
+        const username = "test";
+        const password = "1111";
+
+        const user = {
+            username: "test1",
+            password: "1234",
+        }
+
+        const error = {
+            fieldName: "username",
+            errorMessage: "사용자이름을 확인하세요.",
+        }
+
+        console.log(error.errorMessage + `(${user[error.fieldName]})`)
+
+        const student =  {
+            name: "김준일",
+            age: 32,
+        }
+
+        console.log(student.name);
+        console.log(student.age);
+        console.log(student["name"]);
+        console.log(student["age"]);
+        console.log(student[0]);
+        console.log(student[1]);
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <script>
+        // 클래스
+        class User {
+            username = "test";
+            password = "1234";
+        }
+
+        let user = new User();
+        console.log(user);
+        user.username = "test2";
+        console.log(user);
+
+        // 클래스는 재정의 불가능
+        // class User {
+        //     username;
+        //     password;
+        // }
+
+        class User2 {
+            username;
+            password;
+
+            constructor(username, password, setPassword) {
+                this.username = username;
+                this.password = password;
+                this.setPassword = setPassword;
+            }
+
+            setUsername(username) {
+                this.username = username;
+            }
+        }
+
+        let user2 = new User2("test3", "1111", (password) => (user2.password = password));
+        console.log(user2);
+        user2.setUsername("test4");
+        console.log(user2)
+        user2.setPassword("3333");
+        console.log(user2)
+
+        const user3 = {
+            username: "test1",
+            password: '1234',
+            setUsername: function (username) {this.username = username},
+            // setPassword: (password) => {this.password = password},
+            setPassword: (password) => {user3.password = password}
+        }
+
+        console.log(user3);
+        user3.setUsername("test2");
+        console.log(user3);
+
+    </script>
+
+</body>
+</html>
