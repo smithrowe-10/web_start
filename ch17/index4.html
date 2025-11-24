@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    
+    <script>
+
+        new Promise((rs, rj) => {
+            console.log(1);
+            rj(10);
+            rs(10);
+            console.log("오류 생성");
+        }).catch((v) => {
+            console.log("reject 호출");
+            console.log(v);
+            return 100000;
+        }).then((v) => {
+            console.log("resolve 호출");
+            console.log(v);
+            return 10000;
+        })
+
+        new Promise((rs, rj) => {
+            console.log(2);
+            rs(20);
+        }).then((v) => {
+            console.log(v);
+        })
+
+        new Promise((rs, rj) => {
+            console.log(3);
+            rj(30);
+        }).catch((v) => {
+            console.log(v);
+        })
+
+    </script>
+
+</body>
+</html>

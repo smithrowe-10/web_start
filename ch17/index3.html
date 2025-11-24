@@ -15,7 +15,7 @@
         
         const p1 = new Promise((rs, rj) => {
             console.log(1);
-            rs(1 * 10);
+            rs(1 * 10); // 이거 어디서 실행되냐면
         });
 
         console.log("a2");
@@ -36,8 +36,8 @@
         console.log("a4");
       
         const p4 = p1.then((v) => {
-            console.log(v);
-            return v * 10;
+            console.log(v); // 이거임 ㅇㅇ;;
+            return v * 10; // 이게 이제또
         });
 
         console.log("a5");
@@ -59,7 +59,7 @@
         console.log("a7");
       
         const p7 = p4.then((v) => {
-            console.log(v);
+            console.log(v); // 여서 실행;
         })
 
         console.log("a8");
