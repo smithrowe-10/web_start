@@ -11,49 +11,65 @@
 <body>
     
     <script>
-
+        console.log("a1");
+        
         const p1 = new Promise((rs, rj) => {
             console.log(1);
             rs(1 * 10);
         });
 
+        console.log("a2");
+      
         const p2 = new Promise((rs, rj) => {
             console.log(2);
             rs(2 * 10);
         });
 
+        console.log("a3");
+      
         const p3 = new Promise((rs, rj) => {
             console.log(3);
             rs(3 * 10);
         });
 
 
-
+        console.log("a4");
+      
         const p4 = p1.then((v) => {
             console.log(v);
             return v * 10;
         });
 
+        console.log("a5");
+      
         const p5 = p2.then((v) =>  {
             console.log(v);
             return v * 10;
         });
 
+        console.log("a6");
+      
         const p6 = p3.then((v) => {
             console.log(v);
             return v * 10;
         });
 
-        
 
+
+        console.log("a7");
+      
         const p7 = p4.then((v) => {
             console.log(v);
         })
 
+        console.log("a8");
+      
         const p8 = p5.then((v) => {
             console.log(v);
         })
 
+        console.log("a9");
+      
         const p9 = p6.then((v) => {
             console.log(v);
         })
