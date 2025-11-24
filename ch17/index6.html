@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        async await
+        */
+
+        function callPromise(num) {
+            return new Promise((rs, rj) => {
+                console.log("프로미스 생성");
+                if (num % 2 !== 0) {
+                    rs("홀수");
+                } else {
+                    rj(new Error("짝수"));
+                }
+            });
+        }
+        // 내가 원할 때에 실행되도록 하기 위해
+
+        // 리액트 엑시오스
+        callPromise(11).then(v => console.log(v)).catch(e => console.error(e));
+        callPromise(12).then(v => console.log(v)).catch(e => console.error(e));
+
+        // 함수가 비동기처리로 -> Promise 의미
+        // async가 붙으면 return이 자동으로 Promise
+        async function callPromise2(num) {
+            if (num % 2 !== 0) {
+                return "홀수"; // resolve
+            } else {
+                throw new Error("짝수"); // reject
+            }
+        }
+
+        callPromise(11).then(v => console.log(v)).catch(e => console.error(e));
+        callPromise(12).then(v => console.log(v)).catch(e => console.error(e));
+
+
+
+        // async 함수 
+        async function callPromise3(num) {
+            if (num % 2 !== 0) {
+                return "홀수"; // resolve
+            } else {
+                throw new Error("짝수"); // reject
+            }
+        }
+
+
+        // await는 Promise 앞에만 붙일 수 있음
+        // 다시 말해서 async function 앞에 붙일 수 있는 것
+        try {
+            const v = await callPromise3(11);
+            console.log(v);
+        } catch (e) {
+            console.error(e);
+        }
+
+        try {
+            const v = await callPromise3(12);
+            console.log(v);
+        } catch (e) {
+            console.error(e);
+        }
+
+    </script>
+</body>
+</html>

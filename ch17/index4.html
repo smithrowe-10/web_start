@@ -17,14 +17,16 @@
             rj(10);
             rs(10);
             console.log("오류 생성");
-        }).catch((v) => {
-            console.log("reject 호출");
-            console.log(v);
-            return 100000;
         }).then((v) => {
             console.log("resolve 호출");
             console.log(v);
+            const error = new Error(100000);
+            throw error
             return 10000;
+        }).catch((e) => {
+            console.log("reject 호출");
+            console.log(v);
+            return 100000;
         })
 
         new Promise((rs, rj) => {

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+
+    <script>
+
+        Promise.all([
+            new Promise (rs => rs(10)),
+            new Promise (rs => rs(20)),
+            new Promise (rs => rs(30)),
+            new Promise (rs => rs(40)),
+        ]).then(values => {
+            console.log(values);
+        });
+
+        Promise.all([
+            new Promise(rs => {
+                console.log(1);
+                rs(100);
+            }),
+            new Promise(rs => {
+                console.log(2);
+                setTimeout(() => rs(200), 3000);
+            }),
+            new Promise(rs => {
+                console.log(3);
+                rs(300);
+            }),
+        ]).then(values => {
+            console.log(values);
+        })
+
+
+    </script>
+    
+</body>
+</html>
