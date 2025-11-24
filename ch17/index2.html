@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <script>
+
+        /**
+         * Promise (나중에 동작하기로 약속)
+         */
+
+        const executor = (resolve, reject) => {
+            console.log(1);
+            console.log(2);
+            setTimeout(() => resolve(), 3000);
+        }
+
+         new Promise(executor).then(() => {
+            console.log(6);
+         });
+
+
+
+        console.log(3);
+
+
+        new Promise((resolve, reject) =>  {
+            console.log(4);
+            console.log(5);
+            resolve();
+        }).then(() =>  {
+            console.log(7);
+        })
+
+
+
+        new Promise((resolve, reject) => {
+            console.log("promise 생성");
+            setTimeout(() => {
+                const name = prompt("이름입력");
+                if (!name) {
+                    // null / undifined는 false로 취급
+                    reject("오류다이개자슥ㅉ인셍그럿게살지마");
+                    return;
+                }
+
+                resolve(name);
+                
+            }, 5000)
+        }).then((name) => {
+            console.log(8);
+            console.log(name);
+        }).catch((error) => {
+            console.log(error);
+        });
+
+    </script>
+    
+</body>
+</html>

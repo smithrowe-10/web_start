@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    
+    <script>
+
+        const p1 = new Promise((rs, rj) => {
+            console.log(1);
+            rs(1 * 10);
+        });
+
+        const p2 = new Promise((rs, rj) => {
+            console.log(2);
+            rs(2 * 10);
+        });
+
+        const p3 = new Promise((rs, rj) => {
+            console.log(3);
+            rs(3 * 10);
+        });
+
+
+
+        const p4 = p1.then((v) => {
+            console.log(v);
+            return v * 10;
+        });
+
+        const p5 = p2.then((v) =>  {
+            console.log(v);
+            return v * 10;
+        });
+
+        const p6 = p3.then((v) => {
+            console.log(v);
+            return v * 10;
+        });
+
+        
+
+        const p7 = p4.then((v) => {
+            console.log(v);
+        })
+
+        const p8 = p5.then((v) => {
+            console.log(v);
+        })
+
+        const p9 = p6.then((v) => {
+            console.log(v);
+        })
+
+    </script>
+
+</body>
+</html>
