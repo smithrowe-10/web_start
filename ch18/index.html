@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <script>
+
+        const a = 0;
+        const b = 0.0;
+        const c = "";
+        const d = null;
+        const e = undefined;
+        const f = NaN;
+        const g = false;
+        const h = {};
+        const i = [];
+
+        console.log(!!a);
+        console.log(!!b);
+        console.log(!!c);
+        console.log(!!d);
+        console.log(!!e);
+        console.log(!!f);
+        console.log(!!g);
+        console.log(!!h);
+        console.log(!!i);
+        console.log("========================");
+        console.log(!a);
+        console.log(!b);
+        console.log(!c);
+        console.log(!d);
+        console.log(!e);
+        console.log(!f);
+        console.log(!g);
+        console.log(!h);
+        console.log(!i.length);
+
+        // 객체 구성
+        console.log(Object.keys(h).length);
+        const user = {
+            username: "test",
+            password: "1234",
+        }
+
+        console.log(Object.keys(user));
+        console.log(Object.values(user));
+        console.log(Object.entries(user));
+        
+        console.log(Object.entries(user)[0][0]);
+        console.log(Object.entries(user)[0][1]);
+        console.log(Object.entries(user)[1][0]);
+        console.log(Object.entries(user)[1][1]);
+
+
+    </script>
+    
+</body>
+</html>

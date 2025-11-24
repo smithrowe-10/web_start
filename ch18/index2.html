@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    
+    <script>
+
+        // 먼저 트루가 나오는 놈이 주인공
+        console.log(1 || 2);
+        console.log(11 || 21);
+        console.log(0 || 21 || 0);
+
+        // 마지막이 주인공, 누구 덕분에 true가 되는지가 중요
+        console.log(11 && 21);
+        console.log(11 && 21 && 10);
+
+        const a = 2;
+
+        console.log((a % 2 === 0 && "짝수") || "홀수");
+
+        const b = null;
+        console.log(b ?? "test");
+        const c = {};
+        console.log(c ?? "test");
+
+   </script>
+
+</body>
+</html>

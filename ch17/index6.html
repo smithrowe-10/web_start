@@ -51,22 +51,28 @@
             }
         }
 
+        async function asyncFunction() {
+            try {
+                const v = await callPromise3(11);
+                console.log(v);
+            } catch (e) {
+                console.error(e);
+            }
+
+            try {
+                const v = await callPromise3(12);
+                console.log(v);
+            } catch (e) {
+                console.error(e);
+            }
+        }
+
+        asyncFunction();
+
 
         // await는 Promise 앞에만 붙일 수 있음
         // 다시 말해서 async function 앞에 붙일 수 있는 것
-        try {
-            const v = await callPromise3(11);
-            console.log(v);
-        } catch (e) {
-            console.error(e);
-        }
 
-        try {
-            const v = await callPromise3(12);
-            console.log(v);
-        } catch (e) {
-            console.error(e);
-        }
 
     </script>
 </body>
